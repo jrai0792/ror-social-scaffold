@@ -1,0 +1,13 @@
+<h1>Pending Invitations</h1>
+
+
+<% @invitations.each do |invitation|%>
+  <% if invitation.status%>
+    <p> <%=invitation.sender.name %>
+
+    <%= form_for(invitation, url: user_friendships_path(invitation), method: 'POST') do |f| %>
+        <%= hidden_field_tag 'sender_id', invitation.sender_id%>
+        <%= f.submit "Accept" %>
+    <%end%></p>
+   <%end%> 
+<%end%>
