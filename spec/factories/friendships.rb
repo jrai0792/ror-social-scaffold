@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :friendship do
-    status {'Accepted'}
+    status { 'Accepted' }
   end
 end

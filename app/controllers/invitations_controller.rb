@@ -4,7 +4,7 @@ class InvitationsController < ApplicationController
     @invitation.sender_id = current_user.id
     @invitation.reciever_id = params[:user_id]
     @invitation.save
-    redirect_to users_path    
+    redirect_to users_path
   end
 
   def index
