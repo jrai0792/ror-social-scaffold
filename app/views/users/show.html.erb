@@ -1,8 +1,8 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
    <%=form_for(@user, url: user_friendships_path(@user), method: "GET") do |f|%>
-    <%=f.submit "#{Friendship.accepted_request(@user).size} Invitation Sent"%>
-    <%=f.submit "#{Friendship.request_confirmed(@user).size} Friends"%>
+    <%=f.submit "#{Friendship.accepted_request(@user).size} Follower"%>
+    <%=f.submit "#{Friendship.request_confirmed(@user).size} Following"%>
   <%end%>
   <%unless current_user==@user%>
     <%unless Invitation.invitation_exists?(current_user.id, @user.id)%>

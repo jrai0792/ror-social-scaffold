@@ -14,8 +14,8 @@ class FriendshipsController < ApplicationController
 
   def index
     @friendships = []
-    @status = ""
-    if params[:commit].include?("Following")
+    @status = ''
+    if params[:commit].include?('Following')
       @friendships = Friendship.request_confirmed(params[:user_id])
       @status = 'following'
     else
