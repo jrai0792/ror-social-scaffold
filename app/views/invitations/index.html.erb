@@ -8,6 +8,7 @@
     <%= form_for(invitation, url: user_friendships_path(invitation), method: 'POST') do |f| %>
         <%= hidden_field_tag 'sender_id', invitation.sender_id%>
         <%= f.submit "Accept" %>
+        <%= f.submit "Decline" %>
     <%end%></p>
    <%end%> 
 <%end%>

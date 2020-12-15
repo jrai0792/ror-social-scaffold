@@ -1,7 +1,15 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
-  <%= form_for(@user, url: user_invitations_path(@user), method: 'POST') do |f|%>
-    <%= f.submit "Follow"%>
+   <%=form_for(@user, url: user_friendships_path(@user), method: "GET") do |f|%>
+    <%=f.submit "#{Friendship.accepted_request(@user).size} Followers"%>
+    <%=f.submit "#{Friendship.request_confirmed(@user).size} Following"%>
+  <%end%>
+  <%unless current_user==@user%>
+    <%unless Invitation.invitation_exists?(current_user.id, @user.id)%>
+      <%= form_for(@user, url: user_invitations_path(@user), method: 'POST') do |f|%>
+        <%= f.submit "Follow"%>  
+      <%end%>
+    <%end%>
   <%end%>
   <article class="timeline">
     <h3>Recent posts:</h3>
