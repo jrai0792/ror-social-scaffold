@@ -1,4 +1,5 @@
 FactoryBot.define do
-  factory :invitation do
+  factory :like do
+    
   end
 end

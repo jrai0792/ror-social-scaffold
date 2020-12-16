@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Invitation, type: :model do
+RSpec.describe Comment, type: :model do
   #pending "add some examples to (or delete) #{__FILE__}"
   describe 'Associations' do
-    it { should belong_to(:sender)}
-    it {should belong_to(:reciever)}
+    it {should belong_to(:user)}
+    it {should belong_to(:post)}
   end
-
 end
