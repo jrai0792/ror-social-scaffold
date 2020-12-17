@@ -29,5 +29,4 @@ class FriendshipsController < ApplicationController
       @status = 'followers'
     end
   end
-
 end
