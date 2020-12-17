@@ -30,15 +30,4 @@ class FriendshipsController < ApplicationController
     end
   end
 
-  # def following(arg1, arg2)
-  #   status = false
-  #   friendship = Friendship.new
-  #   friendship.invitor_id = arg1
-  #   friendship.invitee_id = arg2
-  #   status = true if params[:commit] == "Accept"
-  #   friendship.status = status
-  #   friendship.save
-  #   invitation = Invitation.where("sender_id = ? and reciever_id = ?", arg1, arg2).first
-  #   invitation.update(status: false) if !invitation.nil?)
-  # end
 end
