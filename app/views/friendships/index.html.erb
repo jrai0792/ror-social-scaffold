@@ -1,15 +1,15 @@
-<%if @status=="following"%>
-Following
-<ul>
-<%@friendships.each do |friendship|%>
-<li><%=friendship.invitee.name%></li>
-<%end%>
-</ul>
+<% if @status=="following"%>
+  Friends
+  <ul>
+    <%@friendships.each do |friendship|%>
+    <li><%=friendship.invitee.name%></li>
+    <%end%>
+  </ul>
 <%else%>
-Follower
-<ul>
-<%@friendships.each do |friendship|%>
-<li><%=friendship.invitor.name%></li>
-<%end%>
-</ul>
+  Invite Sent
+  <ul>
+    <%@friendships.each do |friendship|%>
+    <li><%=friendship.invitor.name%></li>
+    <%end%>
+  </ul>
 <%end%> 
