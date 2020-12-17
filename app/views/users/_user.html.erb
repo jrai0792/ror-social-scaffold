@@ -1,6 +1,16 @@
-<li>
-  Name: <%= user.name %>
-  <span class="profile-link">
-    <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-  </span>
-</li>
+<%unless current_user== user%>
+  <li>
+    Name: <%= user.name %>
+    <span class="profile-link">
+      <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    </span>
+
+    <%unless current_user == user%>
+        <%unless Invitation.invitation_exists?(current_user.id, user.id) || Invitation.invitation_exists?(user.id, current_user.id)%>
+          <%= form_for(user, url: user_invitations_path(user), method: 'POST') do |f|%>
+          <%= f.submit "Follow"%>  
+          <%end%>
+        <%end%>
+    <%end%>
+  </li>
+<%end%>

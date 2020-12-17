@@ -20,7 +20,13 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    # @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    @timeline_posts ||= Post.where('user_id = ? or user_id in (?)', current_user.id,
+                                   find_invitees_id).order(created_at: :desc)
+  end
+
+  def find_invitees_id
+    Friendship.where('invitor_id=?', current_user.id).pluck('invitee_id')
   end
 
   def post_params
