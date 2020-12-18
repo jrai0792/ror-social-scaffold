@@ -1,5 +1,5 @@
 module InvitationsHelper
   def check_status?(arg)
-     arg.status
+    arg.status
   end
 end
