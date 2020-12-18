@@ -10,18 +10,10 @@
   </ul>
    <%=form_for(@user, url: user_friendships_path(@user), method: "GET") do |f|%>
     <%=f.submit "Friends #{Friendship.accepted_request(@user).size + Friendship.request_confirmed(@user).size}"%>
-    <%# <%=f.submit "#{Friendship.request_confirmed(@user).size} Invite Sent"  %> 
   <%end%> 
-  <%unless current_user==@user%>
-      <%unless Friendship.friendship_exists?(current_user.id, @user.id)%>
-        <%unless Invitation.invitation_exists?(current_user.id, @user.id) || Invitation.invitation_exists?(@user.id, current_user.id)%>
-          <%= form_for(@user, url: user_invitations_path(@user), method: 'POST') do |f|%>
-            <%= f.submit "Send Invite"%>  
-          <%end%>
-        <%end%>
-      <%end%>
-   
-  <%end%>
+  <%= check_user(current_user, @user)%>
+      <%= check_friendship(current_user, @user) %>
+  
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
