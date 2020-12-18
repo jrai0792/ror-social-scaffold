@@ -9,7 +9,7 @@
     <%end %>
   </ul>
    <%=form_for(@user, url: user_friendships_path(@user), method: "GET") do |f|%>
-    <%=f.submit "Friends #{Friendship.accepted_request(@user).size + Friendship.request_confirmed(@user).size}"%>
+    <%=f.submit "Friends #{Friendship.accepted_request(@user).size}"%>
   <%end%> 
   <%= check_user?(current_user, @user)%>
       <%= check_friendship(current_user, @user) %>
