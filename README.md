@@ -1,93 +1,42 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> In this project, I practised building associations between models. ALso practised active record queries.
 
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
-
+- Postgresql
+- VSCode
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
-### Prerequisites
+# To get this project set up on your local machine, follow these simple step
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: git clone https://github.com/jrai0792/ror-social-scaffold
+4. Run cd ror-social-scaffold.
+5. Run bundle install to get the necesary gems.
+6. Run rails db:create.
+7. Run rails db:migrate.
+8. Run rails server
 
 ## Authors
 
-TBA
+👤 **Jyoti Rai**
 
-## 🤝 Contributing
+- GitHub: [@jrai0792](https://github.com/githubhandle)
 
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
 
 ## 📝 License
 
-TBA
+This project is MIT licensed.
 

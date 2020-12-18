@@ -19,7 +19,6 @@
         </div>
         <% if current_user%>
           <div class="menu-item">
-              <%# <%= link_to  current_user.name %> 
               <%= link_to  current_user.name, user_path(current_user) %>
           </div>
         <%end%>  
