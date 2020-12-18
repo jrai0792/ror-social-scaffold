@@ -4,7 +4,7 @@ RSpec.describe Friendship, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
 
   user1 = User.create(
-    name: 'ab',
+    name: 'ab1',
     email: 'ab@example.com',
     password: 'test@12',
     password_confirmation: 'test@12'

@@ -5,7 +5,7 @@
       <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
     </span>
 
-    <%= check_user(current_user, user)%>
+    <%= check_user?(current_user, user)%>
         <%= check_friendship(current_user, user) %>
   </li>
 <%end%>
