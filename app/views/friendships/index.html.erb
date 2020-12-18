@@ -1,0 +1,6 @@
+<%= friend_list?(@status)%>
+  <ul>
+    <%@friendships.each do |friendship|%>
+    <li><%=friendship.invitee.name%></li>
+    <%end%>
+  </ul>
