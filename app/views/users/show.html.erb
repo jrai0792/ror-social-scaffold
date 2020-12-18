@@ -12,7 +12,7 @@
     <%=f.submit "Friends #{Friendship.accepted_request(@user).size}"%>
   <%end%> 
   <%= check_user?(current_user, @user)%>
-      <%= check_friendship(current_user, @user) %>
+  <%= check_friendship(current_user, @user) %>
   
   <article class="timeline">
     <h3>Recent posts:</h3>
